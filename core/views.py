@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def show_home(request):
     return render(request,'home.html')
+
+def show_login(request):
+    return render(request,'login.html')
