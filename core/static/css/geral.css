@@ -1,3 +1,6 @@
-#btn-entrar{
-    border-radius: 30px;
+
+#form-login{
+    width: 700px;
+    padding: 70px 90px; 
+    margin: 20px auto 20px auto;
 }
