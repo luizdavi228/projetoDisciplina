@@ -1,0 +1,41 @@
+{% extends 'geral/base.html' %}
+{% block titulo %} <title>Livros</title> {% endblock %}
+{% block conteudo %}
+<h4><span class="badge badge-secondary">Lista de Livros</span></h4>
+    
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Título</th>
+        <th scope="col">Editora</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Publicação</th>
+        <th scope="col">Localização</th>
+        <th scope="col">Preço</th>
+        <th>Ações</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        {% for livro in livros %}
+            <th scope="row"> {{livro.codigo_livro}} </th>             
+            <td> {{livro.titulo_livro}} </td>
+            <td> {{livro.editora}} </td>
+            <td> {{livro.nome_primeiro_autor}} </td>
+            <td> {{livro.ano_publicacao}} </td>
+            <td> {{livro.localizacao_estante}} </td>
+            <td> {{livro.preco|floatformat:2}} </td>
+            <td><a href="{% url 'livro_update' livro.codigo_livro %}" class="btn btn-info btn-sm" >Editar</a>   <a href="{% url 'livro_delete' livro.codigo_livro %}" class="btn btn-danger btn-sm">Excluir</a></td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+  </table>
+<br/>
+
+<a href="{% url 'livro_create' %}" class="btn btn-success">Novo Funcionário</a>
+
+<br/><br/><br/>
+
+{% endblock %}

@@ -3,22 +3,26 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
-    <link rel="stylesheet" href="{% static 'css/geral.css' %}">
-    <title>Início</title>
+    <title>Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/geral.css' %}" rel="stylesheet">
 </head>
 
 <body>
-    <div class="form bg-white" id="form-login">
-        <hr>
+
+    <div class="form bg-white">
         <form method="POST">
             <input type="hidden" name="csrfmiddlewaretoken"
-                value="kJirufhCEdIJRrCwixcto0A06jt19MJPGfbbSc2N0FJYdYmfserHJwJQadBVjKTp">
+                value="rLNWxukASnjvcWeGvSnNupyBttMGDyHitOOyn7q3RAxmU52V2kXCXFzCZwBznpNi">
 
             <div class="row">
                 <div class="col-12">
@@ -36,22 +40,19 @@
             <div class="mt-4">
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary w-100 m-1 p-3" type="submit" id='btn-entrar'>Entrar</button>
+                        <button class="btn btn-primary w-100 m-1 p-3" type="submit" id="bt-entrar">Entrar</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
 
-    <script src="{% static 'jquery-3.3.1.slim.min' %}"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="{% static "js/jquery-slim.min.js" %}"><\/script>')</script>
+    <script src="{% static 'js/popper.min.js' "%}"></script>
+    <script src="{% static 'js/bootstrap.min.js' "%}"></script>
 </body>
 
 </html>

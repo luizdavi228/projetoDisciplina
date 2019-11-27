@@ -1,0 +1,55 @@
+{% extends 'geral/base.html' %}
+{% block titulo %} <title>Cadastro Livro </title>{% endblock %}
+{% block conteudo %}
+<h4><span class="badge badge-secondary">Livro</span></h4>
+<br />
+
+
+
+<div class="form-cadastro">
+    <form action="" method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            --------
+        <!-- 
+        <div class="row">
+            <div class="col-12">
+                <input type="text" class="form-control" placeholder="Título" maxlength="255" required id="id_titulo">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Código" maxlength="255" required id="id_codigo">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Editora" maxlength="255" required id="id_editora" >
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Primeiro Autor" maxlength="255" required id="id_primeiro_autor">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Segundo Autor" maxlength="255" required id="id_segundo_autor">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Ano Publicação" maxlength="255" required id="id_ano_publicacao">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Localização Estante" maxlength="255" required id="id_localizacao_estante">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Preço" max_digits = 8, decimal_places = 2 id="id_preco">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Temática" maxlength="255" required id="id_tematica">
+            </div>
+
+        </div>
+        -->>
+    </form>
+</div>
+
+<td><a href="{% url 'livro_list' %}" class="btn btn-secondary">Cancelar</a> <button type="submit"
+        class="btn btn-success">Salvar</button></td>
+
+
+{% endblock %}

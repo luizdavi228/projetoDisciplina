@@ -10,6 +10,8 @@ class Livro(models.Model):
     ano_publicacao = models.IntegerField('Ano de Publicação', default = 0, null = False, blank = False)
     localizacao_estante = models.CharField('Localização',max_length = 255,null = False, blank = False)
     tematica_livro = models.CharField('Temática', max_length = 255,null = False, blank = False)
+    preco = models.DecimalField('Preço', max_digits = 8, decimal_places = 2, null = False, blank = False)
+    objects = models.Manager()
 
     class Meta:
         verbose_name = 'Livro'
@@ -17,7 +19,6 @@ class Livro(models.Model):
 
     def __str__(self):
         return self.titulo_livro
-
 class Emprestimo(models.Model):
     data_emprestimo = models.DateField('Data do Empréstimo', null = False)
     matricula_emprestado = models.CharField('Matrícula', max_length = 255,null = False, blank = False)
